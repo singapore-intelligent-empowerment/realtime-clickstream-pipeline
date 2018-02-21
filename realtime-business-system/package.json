@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.1.1",
     "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "chardet": "^0.4.2",
     "client": "0.0.1",
+    "fast-json-stable-stringify": "^2.0.0",
+    "glob": "^7.1.2",
+    "http-parser-js": "^0.4.10",
     "path": "^0.12.7",
+    "punycode": "^2.1.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.5",
     "react-d3-basic": "^1.6.11",
@@ -15,7 +22,8 @@
     "react-router-dom": "4.0.0-beta.6",
     "react-scripts": "1.0.10",
     "recharts": "^1.0.0-alpha.2",
-    "webpack": "^3.2.0"
+    "time-stamp": "^2.0.0",
+    "webpack": "^2.2.0"
   },
   "scripts": {
     "start": "PORT=8088 react-scripts start",
