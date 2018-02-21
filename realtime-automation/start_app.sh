@@ -4,8 +4,8 @@
 export PROJECT_HOME=~/projects/realtime
 
 update_repo(){
-    cd ${PROJECT_HOME}
-    git pull
+   cd ${PROJECT_HOME}
+   git pull
 }
 
 run_buz_sys(){
@@ -20,7 +20,7 @@ run_buz_sys(){
 run_node_app(){
     echo "Run Node App ..."
     cd ${PROJECT_HOME}/realtime-service
-    sudo npm install
+    npm install
     npm start &
     return
 }
@@ -29,7 +29,6 @@ run_node_app(){
 run_dashboard(){
     echo "Run Dashboard ..."
     cd ${PROJECT_HOME}/realtime-dashboard
-    sudo npm install
     npm run build
     npm run start
 }
