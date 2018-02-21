@@ -3,22 +3,9 @@
 # start business system
 export PROJECT_HOME=~/projects/realtime
 
-prepare(){
-    #install git
-    sudo apt-get install git
-    mkdir projects
-    cd projects
-    git clone git@github.com:XiaoMingXing/realtime.git
-
-    #install node
-    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-    sudo apt-get install -y nodejs
-}
-
 update_repo(){
-    cd ~/projects
-    rm -rf realtime
-    git clone git@github.com:singapore-intelligent-empowerment/realtime-clickstream-pipeline.git realtime
+    cd ${PROJECT_HOME}
+    git pull
 }
 
 run_buz_sys(){
