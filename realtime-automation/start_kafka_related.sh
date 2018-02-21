@@ -8,7 +8,7 @@ prepare(){
 
     cd ~/projects
     rm -rf realtime
-    git clone git@github.com:XiaoMingXing/realtime.git
+    git clone git@github.com:singapore-intelligent-empowerment/realtime-clickstream-pipeline.git realtime
     cd realtime/realtime-automation
 
     python scripts/automate.py
