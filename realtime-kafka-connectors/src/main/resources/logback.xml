@@ -1,0 +1,31 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>/var/logs/kafka-related/kafka-connector.log</file>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.everydots.kafka.connect.mongodb" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <!-- for testcontainers -->
+    <logger name="org.testcontainers" level="DEBUG"/>
+    <logger name="org.apache.http" level="WARN"/>
+    <logger name="com.github.dockerjava" level="INFO"/>
+    <logger name="org.zeroturnaround.exec" level="WARN"/>
+
+</configuration>
