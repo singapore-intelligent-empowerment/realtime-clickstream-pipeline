@@ -29,6 +29,7 @@ run_node_app(){
 run_dashboard(){
     echo "Run Dashboard ..."
     cd ${PROJECT_HOME}/realtime-dashboard
+    sudo npm install
     npm run build
     npm run start
 }
