@@ -20,7 +20,7 @@ run_buz_sys(){
 run_node_app(){
     echo "Run Node App ..."
     cd ${PROJECT_HOME}/realtime-service
-    npm install
+    sudo npm install
     npm start &
     return
 }
